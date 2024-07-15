@@ -38,7 +38,7 @@ export const SingleCustomer = () => {
 
   const handleTransfer = async () => {
     try {
-      const result = await axios.post('http://localhost:8000/api/transaction', {
+      const result = await axios.post('https://basic-banking-website-7ujs.onrender.com/api/transaction', {
         From: id, To: selectedUser, amount: amount
       })
       window.alert("Transaction sucessfull");
