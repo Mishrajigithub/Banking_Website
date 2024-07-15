@@ -14,11 +14,11 @@ export const SingleCustomer = () => {
   const [selectedUser, setSelectedUser] = useState("");
   const [amount, setAmount] = useState("");
 
-
+ 
   const loadData = async () => {
     setLoading(true);
     try {
-      const result = await axios.get(`http://localhost:8000/api/user/${id}`);
+      const result = await axios.get(`https://basic-banking-website-7ujs.onrender.com/api/user/${id}`);
       setData(result.data);
     } catch (error) {
       setError("Something went wrong in fetching data of the user.");
@@ -28,7 +28,7 @@ export const SingleCustomer = () => {
 
   const loadUserData = async () => {
     try {
-      const result = await axios.get('http://localhost:8000/api/allUsers');
+      const result = await axios.get('https://basic-banking-website-7ujs.onrender.com/api/allUsers');
       const filteredUsers = result.data.filter(user => user._id !== id);
       setAllUser(filteredUsers);
     } catch (error) {
@@ -111,7 +111,7 @@ export const SingleCustomer = () => {
             <>
 
               <Grid item xs={12} sm={8} md={6}>
-                <Card sx={{ minWidth: 275, maxWidth: 650, m: 2, p: 2, boxShadow: 3 ,height:"auto"}}>
+                <Card sx={{ minWidth: 275, maxWidth: 650, m: 2, p: 2, boxShadow: 3, height: "auto" }}>
                   <CardContent>
                     <Typography variant="h5" sx={{ mb: 2, textAlign: 'center' }}>User Details</Typography>
                     {data && (
@@ -139,13 +139,13 @@ export const SingleCustomer = () => {
 
                         <Divider sx={{ my: 2 }} />
 
-                        <Box display={"flex"} justifyContent={'space-between'} alignItems={'center'} sx={{ mb: 2 ,flexDirection: { xs: 'column', sm: 'column', md: 'row', lg: 'row' }}}>
-                         <Box sx={{ mb: { xs: 2, sm: 2, md: 0, lg: 0 } }}>
+                        <Box display={"flex"} justifyContent={'space-between'} alignItems={'center'} sx={{ mb: 2, flexDirection: { xs: 'column', sm: 'column', md: 'row', lg: 'row' } }}>
+                          <Box sx={{ mb: { xs: 2, sm: 2, md: 0, lg: 0 } }}>
 
                             <Typography variant="subtitle1"><strong>Transfer money</strong></Typography>
                           </Box>
 
-                         <Box sx={{ mb: { xs: 2, sm: 2, md: 0, lg: 0 } }}>
+                          <Box sx={{ mb: { xs: 2, sm: 2, md: 0, lg: 0 } }}>
 
                             <Input placeholder="Enter amount" onChange={handleAmountChange} />
                           </Box>

@@ -11,7 +11,7 @@ export const TransactionHistory = () => {
     const loadData = async () => {
         setLoading(true);
         try {
-            const result = await axios.get("http://localhost:8000/api/history");
+            const result = await axios.get("https://basic-banking-website-7ujs.onrender.com/api/history");
             setData(result.data);
         } catch (error) {
             setError("Something went wrong in fetching transaction history details.");

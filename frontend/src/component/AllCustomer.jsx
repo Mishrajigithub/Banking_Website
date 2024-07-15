@@ -8,12 +8,12 @@ export const AllCustomer = () => {
     const [userData, setUserData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState();
-    const isSmallDevice = useMediaQuery('(max-width:600px)'); // Define isSmallDevice with useMediaQuery
+ 
 
     const loadUserData = async () => {
         setLoading(true);
         try {
-            const result = await axios.get('http://localhost:8000/api/allUsers');
+            const result = await axios.get('https://basic-banking-website-7ujs.onrender.com/api/allUsers');
             setUserData(result.data);
         } catch (error) {
             setError("Something went wrong. Please try again later!");
