@@ -24,8 +24,8 @@ const Landing = () => {
             </Link>
           </div>
           <div class="social">
-            <a href="https://www.linkedin.com/in/nitin-kumar-singh-4883a7202/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Nitinsingh2002"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/akash-kumar-8b1842216/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Mishrajigithub"><i class="fab fa-github"></i></a>
           </div>
         </div>
       </section>
